@@ -2,8 +2,15 @@
 
 <odoo>
 	<data>
-		<template id="assets_backend" name="Viindoo Backend Theme"
-			inherit_id="web.assets_backend">
+
+		<template id="_assets_primary_variables" name="Dotd Primary Variables" inherit_id="web._assets_primary_variables">
+			<xpath expr="//link[last()]" position="after">
+				<link rel="stylesheet" type="text/scss"
+					href="/to_backend_theme/static/src/scss/primary_variables.scss" />
+			</xpath>
+		</template>
+
+		<template id="assets_backend" name="Dotd Backend Theme" inherit_id="web.assets_backend">
 			<xpath expr=".">
 				<link rel="stylesheet" type="text/scss"
 					href="/to_backend_theme/static/src/scss/style.scss" />
@@ -11,8 +18,8 @@
 					href="/to_backend_theme/static/src/scss/discuss.scss" />
 			</xpath>
 		</template>
-		<template id="web_editor_assets_backend"
-			name="Viindoo Backend Theme" inherit_id="web_editor.assets_backend">
+
+		<template id="web_editor_assets_backend" name="Dotd Backend Theme" inherit_id="web_editor.assets_backend">
 			<xpath
 				expr="//link[@href='/web_editor/static/src/scss/web_editor.backend.scss']"
 				position="after">

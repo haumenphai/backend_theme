@@ -5,40 +5,25 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
-    "name": "Viindoo Backend Theme",
-    "summary": "Mobile backend theme for Odoo community",
+    "name": "Dotd Backend Theme",
+    "summary": "Backend theme for Odoo community",
     "version": "1.0.23",
+	"description": """Dotd Backend Theme""",
 
-	"description": """
-Backend theme for Viindoo, based on the Openworx Backend Theme
-
-    """,
-
-    'author': 'Openworx,T.V.T Marine Automation,Viindoo',
+    'author': 'Openworx,T.V.T Marine Automation,Viindoo, Dotd',
     'website': 'https://viindoo.com',
     'live_test_url': 'https://v13demo-int.erponline.vn',
     'support': 'apps.support@viindoo.com',
 
-    # Categories can be used to filter modules in modules listing
     'category': 'Website/Theme/Backend',
-    'version': '0.1.0',
-
-    "depends": [
-        'web',
-        'web_editor',
-        'web_responsive',
-        'viin_brand_common',
-    ],
+    "depends": ['web', 'web_editor', 'web_responsive'],
     "data": [
         'views/assets.xml',
 		'views/res_company_view.xml',
-		# 'views/users.xml',
-        # 'views/sidebar.xml',
     ],
-    'images':[
+    'images': [
         'images/screen.png'
     ],
-
     'installable': True,
     'application': False,
     'auto_install': ['web'],
